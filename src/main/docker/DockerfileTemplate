@@ -1,5 +1,0 @@
-FROM openjdk
-VOLUME /tmp
-ADD maven/${filename}.jar ${filename}.jar
-RUN sh -c 'touch /farmingAggregatorApp.jar'
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/${filename}.jar"]
